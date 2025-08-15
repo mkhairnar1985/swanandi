@@ -1,0 +1,39 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1rem;
+}
+
+.responsive-image {
+    max-width: 100%;
+    height: auto;
+    flex: 1 1 50%;
+}
+
+.text-content {
+    flex: 1 1 50%;
+    background-color: red; /* Light gray background for text content */
+    padding: 1rem; /* Add some padding around the text */
+}
+
+.additional-text {
+    /* You can add specific styles for the additional line here if needed */
+    background-color: #add8e6; /* Light blue background for the new line */
+    padding: 0.5rem; /* Add some padding around the new line */
+    display: inline-block; /* Allows the background to wrap tightly around the text */
+    margin-top: 0.5rem; /* Add some space above the new line */
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .responsive-image,
+    .text-content {
+        flex: 100%;
+    }
+}
