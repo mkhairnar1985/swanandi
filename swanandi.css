@@ -1,0 +1,35 @@
+.container {
+    display: flex;
+    flex-direction: row; /* Initial horizontal layout */
+    flex-wrap: wrap; /* Prevent wrapping on larger screens */
+    align-items: center; /* Example: Vertically center items */
+    /* justify-content: space-around; Optional: Adjust spacing */
+    box-sizing: border-box;
+    justify-content: space-around;
+    border-style:dashed; 
+}
+
+    .container img {
+        width: 60%; /* Example: Image takes half the width */
+    }
+    .contain p{
+        text-align:center;
+    }
+    .container h1 {
+        width: 40%;
+        text-align: center;
+    }
+
+
+
+/* Media query to stack items vertically on smaller screens */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stacks items vertically */
+    }
+
+    .responsive-image,
+    .text-content {
+        flex: 100%; /* Occupies full width on small screens */
+    }
+}
