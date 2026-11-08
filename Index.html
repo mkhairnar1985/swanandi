@@ -1,20 +1,148 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<title> Swanandi </title>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="swanandi.css">
-	</head>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swanandi Kala Manch - Dance Academy by Sheetal Khairnar</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Custom CSS File -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased min-h-screen flex flex-col selection:bg-pink-500 selection:text-white">
 
-<body>
-	<div class="container"> 
-		<div>
-			<h1> Swanandi </h1>
+    <!-- Navbar -->
+    <header class="bg-white/90 backdrop-blur-md border-b border-slate-100 sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <div class="bg-gradient-to-tr from-pink-600 to-rose-500 text-white p-2.5 rounded-2xl font-bold shadow-lg shadow-pink-500/20 flex items-center justify-center w-10 h-10">
+                    <i class="fa-solid fa-music text-sm"></i>
+                </div>
+                <div>
+                    <h1 class="text-base sm:text-lg font-extrabold tracking-tight text-slate-900 leading-none">Swanandi Kala Manch<span class="text-pink-600">.</span></h1>
+                    <p class="text-[10px] font-semibold text-slate-400 tracking-wide uppercase mt-0.5">Led by Sheetal Khairnar</p>
+                </div>
+            </div>
+            <nav class="hidden md:flex items-center gap-6 text-xs font-bold text-slate-600">
+                <a href="index.html" class="text-pink-600 transition">Home</a>
+                <a href="about.html" class="hover:text-pink-600 transition">About Academy</a>
+                <a href="#events" class="hover:text-pink-600 transition">Events</a>
+                <a href="#register" class="px-4 py-2 bg-pink-600 text-white rounded-xl shadow-md shadow-pink-600/20 hover:bg-pink-500 transition">Join Classes</a>
+            </nav>
+        </div>
+    </header>
 
-			<p> Dance your heart out </p1>
-		</div>
-		<img class="responsive-image" src="https://img1.wsimg.com/isteam/ip/bcaeaff8-92a8-41be-b927-85c6fdc312e4/IMG-20250317-WA0022.jpg/:/cr=t:7.63%25,l:7.63%25,w:84.75%25,h:84.75%25/rs=w:667,h:500,cg:true,m" alt="Sorry"/>
-	</div>
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden bg-gradient-to-br from-slate-900 via-pink-950 to-rose-950 text-white py-20 px-4 sm:px-6">
+        <div class="absolute -right-20 -top-20 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="max-w-4xl mx-auto text-center space-y-6 relative z-10">
+            <span class="inline-flex items-center gap-2 bg-pink-500/20 text-pink-300 text-xs font-bold px-3.5 py-1.5 rounded-full uppercase tracking-wider border border-pink-400/20">
+                <i class="fa-solid fa-star text-[10px]"></i> Swanandi Kala Manch &bull; Founder Sheetal Khairnar
+            </span>
+            <h2 class="text-4xl sm:text-6xl font-black tracking-tight leading-tight">Express Your Rhythm, Own the Stage.</h2>
+            <p class="text-slate-300 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">Join specialized regular and batch classes for Bollywood, Freestyle, Kids Development, and festive specials at Swanandi Kala Manch. Available Online & Offline!</p>
+            <div class="flex flex-wrap justify-center gap-3 pt-2">
+                <a href="#register" class="bg-pink-600 hover:bg-pink-500 text-white font-extrabold px-6 py-3.5 rounded-2xl text-xs shadow-lg shadow-pink-600/30 transition">Register for Batches</a>
+                <a href="#events" class="bg-white/10 hover:bg-white/20 text-white font-extrabold px-6 py-3.5 rounded-2xl text-xs backdrop-blur-md border border-white/15 transition">Explore Events</a>
+            </div>
+        </div>
+    </section>
 
+    <!-- Main Wrapper -->
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 py-12 flex-grow w-full space-y-16">
+        
+        <!-- Events Section (Upcoming & Passed) -->
+        <section id="events" class="space-y-8">
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                <div>
+                    <h3 class="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">Events & Workshops</h3>
+                    <p class="text-xs sm:text-sm text-slate-500">Check out upcoming academy workshops or look back at our memorable past shows.</p>
+                </div>
+                <!-- Tabs -->
+                <div class="flex bg-slate-200/70 p-1.5 rounded-2xl gap-1">
+                    <button onclick="switchEventTab('upcoming')" id="tab-upcoming" class="px-4 py-2 text-xs font-extrabold rounded-xl bg-white text-slate-900 shadow-sm transition">Upcoming Events</button>
+                    <button onclick="switchEventTab('passed')" id="tab-passed" class="px-4 py-2 text-xs font-extrabold rounded-xl text-slate-500 hover:text-slate-900 transition">Passed Events</button>
+                </div>
+            </div>
+
+            <!-- Events Grid Container -->
+            <div id="eventsGrid" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Dynamic Events populated by app.js -->
+            </div>
+        </section>
+
+        <!-- Registration / Interest Form Section -->
+        <section id="register" class="bg-white p-8 sm:p-10 rounded-3xl border border-slate-100 shadow-xl shadow-slate-200/50 space-y-6">
+            <div class="max-w-xl space-y-2">
+                <span class="inline-flex items-center gap-1.5 bg-pink-50 text-pink-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider border border-pink-100">
+                    <i class="fa-solid fa-user-check text-[10px]"></i> Admissions Open
+                </span>
+                <h3 class="text-2xl font-black text-slate-900 tracking-tight">Register Your Interest / Join Batches</h3>
+                
+                <!-- Dynamic Target Event Banner -->
+                <div id="selectedEventBanner" class="hidden bg-pink-50 border border-pink-100 p-3 rounded-2xl flex items-center justify-between text-xs text-pink-900 font-bold">
+                    <span>Registering for: <span id="targetEventName" class="underline"></span></span>
+                    <button type="button" onclick="window.clearTargetEvent()" class="text-pink-500 hover:text-pink-700 font-bold ml-2">✕ Clear</button>
+                </div>
+
+                <p class="text-xs sm:text-sm text-slate-500">Fill out your preferences below for regular batches or workshops at Swanandi Kala Manch. We will get in touch shortly!</p>
+            </div>
+
+            <form id="interestForm" onsubmit="window.submitInterest(event)" class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <input type="hidden" id="selectedEventTitle" value="General Inquiry / Regular Batch">
+
+                <div>
+                    <label class="block text-[11px] font-bold uppercase tracking-wider text-slate-500 mb-1.5">Full Name</label>
+                    <input type="text" id="userName" required placeholder="e.g. Vedu Khairnar" class="w-full text-xs rounded-xl border border-slate-200 bg-slate-50/50 px-3.5 py-3 focus:ring-2 focus:ring-pink-500 focus:bg-white focus:outline-none transition font-medium">
+                </div>
+
+                <div>
+                    <label class="block text-[11px] font-bold uppercase tracking-wider text-slate-500 mb-1.5">WhatsApp Number</label>
+                    <input type="tel" id="userPhone" required placeholder="10-digit mobile number" class="w-full text-xs rounded-xl border border-slate-200 bg-slate-50/50 px-3.5 py-3 focus:ring-2 focus:ring-pink-500 focus:bg-white focus:outline-none transition font-medium">
+                </div>
+
+               <div>
+                    <label class="block text-[11px] font-bold uppercase tracking-wider text-slate-500 mb-1.5">Dance Style Preference</label>
+                    <select id="danceStyle" class="w-full text-xs rounded-xl border border-slate-200 bg-slate-50/50 px-3.5 py-3 focus:ring-2 focus:ring-pink-500 focus:bg-white focus:outline-none transition font-medium">
+                        <option value="" disabled selected>Loading dance styles from cloud...</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-[11px] font-bold uppercase tracking-wider text-slate-500 mb-1.5">Mode of Class</label>
+                    <select id="classMode" class="w-full text-xs rounded-xl border border-slate-200 bg-slate-50/50 px-3.5 py-3 focus:ring-2 focus:ring-pink-500 focus:bg-white focus:outline-none transition font-medium">
+                        <option value="Offline (Studio)">Offline (In-Studio)</option>
+                        <option value="Online">Online (Live Virtual)</option>
+                        <option value="Both">Both / Flexible</option>
+                    </select>
+                </div>
+
+                <div class="sm:col-span-2">
+                    <label class="block text-[11px] font-bold uppercase tracking-wider text-slate-500 mb-1.5">Additional Notes or Preferred Timing</label>
+                    <textarea id="userNotes" rows="3" placeholder="Let us know if you want regular weekly batches or weekend workshops..." class="w-full text-xs rounded-xl border border-slate-200 bg-slate-50/50 px-3.5 py-3 focus:ring-2 focus:ring-pink-500 focus:bg-white focus:outline-none transition font-medium"></textarea>
+                </div>
+
+                <div class="sm:col-span-2">
+                    <button type="submit" class="w-full bg-pink-600 hover:bg-pink-500 text-white font-extrabold py-4 rounded-2xl transition duration-200 text-xs shadow-lg shadow-pink-600/25 flex items-center justify-center gap-2 cursor-pointer">
+                        <i class="fa-solid fa-paper-plane text-sm"></i> Submit Application & Join Batch
+                    </button>
+                </div>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-100 mt-20 py-8 text-center text-xs text-slate-400 space-y-2">
+        <p>&copy; 2026 Swanandi Kala Manch. All rights reserved.</p>
+        <p class="text-[11px]">Founder & Lead Choreographer: Sheetal Khairnar</p>
+    </footer>
+
+    <!-- App Script -->
+    <script type="module" src="app.js"></script>
 </body>
 </html>

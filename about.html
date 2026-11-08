@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us & Awards - Swanandi Kala Manch</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased min-h-screen flex flex-col selection:bg-pink-500 selection:text-white">
+
+    <!-- Navbar -->
+    <header class="bg-white/90 backdrop-blur-md border-b border-slate-100 sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <div class="bg-gradient-to-tr from-pink-600 to-rose-500 text-white p-2.5 rounded-2xl font-bold shadow-lg shadow-pink-500/20 flex items-center justify-center w-10 h-10">
+                    <i class="fa-solid fa-music text-sm"></i>
+                </div>
+                <div>
+                    <h1 class="text-base sm:text-lg font-extrabold tracking-tight text-slate-900 leading-none">Swanandi Kala Manch<span class="text-pink-600">.</span></h1>
+                    <p class="text-[10px] font-semibold text-slate-400 tracking-wide uppercase mt-0.5">Led by Sheetal Khairnar</p>
+                </div>
+            </div>
+            <nav class="hidden md:flex items-center gap-6 text-xs font-bold text-slate-600">
+                <a href="index.html" class="hover:text-pink-600 transition">Home</a>
+                <a href="about.html" class="text-pink-600 transition">About Academy</a>
+                <a href="index.html#events" class="hover:text-pink-600 transition">Events</a>
+                <a href="index.html#register" class="px-4 py-2 bg-pink-600 text-white rounded-xl shadow-md shadow-pink-600/20 hover:bg-pink-500 transition">Join Classes</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Wrapper -->
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 py-12 flex-grow w-full space-y-16">
+        
+        <!-- About Section -->
+        <section class="bg-white p-8 sm:p-12 rounded-3xl border border-slate-100 shadow-xl shadow-slate-200/50 space-y-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <div class="lg:col-span-5 relative">
+                    <div class="relative rounded-3xl overflow-hidden shadow-2xl bg-gradient-to-tr from-pink-900 to-rose-950 aspect-[4/5] flex items-center justify-center text-center p-6 text-white">
+                        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=500&auto=format&fit=crop&q=60')] opacity-20 bg-cover bg-center"></div>
+                        <div class="space-y-3 relative z-10">
+                            <div class="w-16 h-16 bg-pink-500/20 text-pink-300 rounded-2xl flex items-center justify-center mx-auto text-2xl border border-pink-400/30 backdrop-blur-md">
+                                <i class="fa-solid fa-award"></i>
+                            </div>
+                            <h4 class="text-xl font-black tracking-tight">Sheetal Khairnar</h4>
+                            <p class="text-xs text-pink-200 font-semibold uppercase tracking-wider">Founder & Lead Choreographer</p>
+                            <div class="pt-4">
+                                <span class="inline-block bg-white/10 backdrop-blur-md text-white text-[10px] font-bold px-3.5 py-1.5 rounded-full border border-white/20">
+                                    Swanandi Kala Manch
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 space-y-5">
+                    <span class="inline-flex items-center gap-1.5 bg-pink-50 text-pink-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider border border-pink-100">
+                        <i class="fa-solid fa-heart text-[10px]"></i> Our Legacy & Vision
+                    </span>
+                    <h3 class="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight leading-snug">Empowering Lives Through Passionate Movement and Grace.</h3>
+                    <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
+                        Founded under the visionary leadership of <strong class="text-slate-900">Sheetal Khairnar</strong>, <strong class="text-slate-900">Swanandi Kala Manch</strong> has grown into a vibrant cultural hub dedicated to nurturing artistic expression. Whether through energetic Bollywood choreography, expressive freestyle, or building foundational confidence in young minds, our academy stands for discipline, joy, and technical precision.
+                    </p>
+                    <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
+                        We believe that dance is for everyone. By offering both structured offline studio training and live interactive online sessions, we bridge distances to bring high-quality choreography straight to your screens and stages.
+                    </p>
+
+                    <div class="grid grid-cols-2 gap-4 pt-4 border-t border-slate-100">
+                        <div>
+                            <p class="text-2xl font-black text-pink-600">100%</p>
+                            <p class="text-[11px] font-bold text-slate-500 uppercase tracking-wide mt-0.5">Dedicated Training</p>
+                        </div>
+                        <div>
+                            <p class="text-2xl font-black text-pink-600">Online/Offline</p>
+                            <p class="text-[11px] font-bold text-slate-500 uppercase tracking-wide mt-0.5">Flexible Batches</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Awards & Recognition Section (Dynamically Loaded) -->
+        <section class="space-y-8">
+            <div class="text-center space-y-2">
+                <h3 class="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">Awards & Recognition</h3>
+                <p class="text-xs sm:text-sm text-slate-500">Celebrating excellence, dedication, and leadership in dance choreography under Sheetal Khairnar.</p>
+            </div>
+
+            <div id="awardsGrid" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="col-span-3 bg-white p-8 rounded-3xl border border-slate-100 text-center text-slate-400">
+                    <p class="text-xs">Loading awards from cloud...</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-100 mt-20 py-8 text-center text-xs text-slate-400 space-y-2">
+        <p>&copy; 2026 Swanandi Kala Manch. All rights reserved.</p>
+        <p class="text-[11px]">Founder & Lead Choreographer: Sheetal Khairnar</p>
+    </footer>
+
+    <!-- About Script -->
+    <script type="module" src="about.js"></script>
+</body>
+</html>

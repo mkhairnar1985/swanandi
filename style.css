@@ -1,0 +1,9 @@
+/* style.css */
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
