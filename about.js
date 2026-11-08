@@ -57,4 +57,12 @@ async function fetchAwardsFromFirestore() {
     }
 }
 
+// Toggle mobile navigation menu
+window.toggleMobileMenu = function() {
+    const menu = document.getElementById('mobileMenu');
+    if (menu) {
+        menu.classList.toggle('hidden');
+    }
+}
+
 fetchAwardsFromFirestore();
