@@ -215,5 +215,32 @@ window.toggleMobileMenu = function() {
     }
 }
 
+window.submitWhatsAppRegistration = function(e) {
+    e.preventDefault();
+
+    // 1. Get values from the simplified form inputs
+    const name = document.getElementById('userName').value.trim();
+    const style = document.getElementById('danceStyle').value;
+    const targetEvent = document.getElementById('selectedEventTitle').value;
+
+    if (!name) {
+        alert("Please enter your name.");
+        return;
+    }
+
+    // 2. Academy WhatsApp Number (Format: Country code + number without '+' or '00', e.g., 91 for India)
+    const academyWhatsAppNumber = "919870640164"; // Replace with Sheetal Khairnar's academy WhatsApp number
+
+    // 3. Format the pre-filled message for WhatsApp
+    const message = `Hello Swanandi Kala Manch,\n\nMy name is *${name}*.\nI am interested in registering for:\n* Event: ${targetEvent}\n* Category/Style: ${style}\n\nPlease share further details!`;
+    
+    // URL-encode the message text
+    const encodedMessage = encodeURIComponent(message);
+
+    // 4. Construct and open the WhatsApp Click-to-Chat URL
+    const whatsappUrl = `https://wa.me/${academyWhatsAppNumber}?text=${encodedMessage}`;
+    window.open(whatsappUrl, '_blank');
+}
+
 // Initialize on Load
 initApp();
